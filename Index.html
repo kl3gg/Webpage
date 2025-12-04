@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="no" class="dark">
+<head>
+    <meta charset = 'UFF-8'>
+    <!-- Put in title on page -->
+    <title> Page title </title> 
+    <meta name ='viewport' content = 'width=device-width, initial-scale=1.0'>
+
+    <!-- To prevent the page from appearing on search engines -->
+    <meta name="robots" content="noindex">  
+    <title>Don't index this page</title>
+    
+    <!-- css file adress her href [css file name] -->
+    <link rel="stylesheet" href="Index.css">
+</head>
+    <!-- main navigation -->
+<body>
+    <header>
+        <button id="theme-toggle" type="button" class="nav-btn" aria-label="Lyst" > 💡 </button>
+
+        <nav class="nav">
+            <!--husk å endre første når du skal ha det i en side -->
+            <a href="Arbeid.html" class="nav-btn">Curriculum Vitae</a>
+            <a href="About.html" class="nav-btn">About</a>
+            <a href="Hobbies.html" class="nav-btn">Hobbies</a>
+            <a href="Contact.html" class="nav-btn">Contact</a> 
+            <a href="CV.pdf" class="primary-btn">Download CV</a>
+            </nav>
+    </header>
+
+    <main>
+    <!-- Name her -->
+        <h1>Name her</h1>
+    <!-- Paragraph title her -->
+        <p>paragraph </p>
+
+        <section>
+            <h2>Summary of CV</h2>
+            <ul> 
+                <li>>Bullet point </li> 
+                <li>>Bullet point </li> 
+                <li>>Bullet point </li> 
+                <li>>Bullet point </li> 
+                <li>>Bullet point </li> 
+                <li>>Bullet point </li>
+            </ul>
+        </section>
+    </main>
+
+  <footer>
+    <!-- Name her for copyright -->
+    <p>© Kristina Jonsen, 2025</p>
+  </footer>
+
+    
+    <!-- Theme -->
+    <script>
+    const btn = document.getElementById('theme-toggle');
+
+    function oppdaterLabel() {
+        const dark = document.documentElement.classList.contains('dark');
+        btn.setAttribute(
+        'aria-label',
+        dark ? 'Light' : 'Dark'
+        );
+    }
+
+    btn.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        oppdaterLabel();
+    });
+
+
+    oppdaterLabel();
+    </script>
+
+
+</body>
+</html>
