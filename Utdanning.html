@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="no" class="dark">
+<head>
+    <meta charset = 'UFF-8'>
+    <!-- Put in title on page -->
+    <title> CV </title> 
+    <meta name ='viewport' content = 'width=device-width, initial-scale=1.0'>
+
+    <!-- To prevent the page from appearing on search engines -->
+    <meta name="robots" content="noindex">  
+    <title>Don't index this page</title>
+    
+    <!-- css file adress her href [css file name] -->
+    <link rel="stylesheet" href="Utdanning.css">
+</head>
+
+<body>
+    <header>
+        <button id="theme-toggle" type="button" class="nav-btn" aria-label="Lyst" > 💡 </button>
+
+        <nav class="nav">
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="Arbeid.html" class="nav-btn">Arbeidserfaring</a>
+            <a href="Kurs_Verv.html" class="nav-btn">Kurs og verv</a>
+            <a href="About.html" class="nav-btn">About</a>
+            <a href="Hobbies.html" class="nav-btn">Hobbies</a>
+            <a href="Contact.html" class="nav-btn">Contact</a>
+            <a href="CV.pdf" class="primary-btn">Download CV</a>
+            </nav>
+    </header>
+
+<main>
+  <h1>Utdanning</h1>
+
+
+
+  
+  <section class="cv-section">
+    <h2>Uniersitet</h2>
+
+    <article class="experience-card">
+      <header class="experience-header">
+        <div>
+          <h3>Norges teknisk-naturvitenskapelige universitet (NTNU), Gjøvik</h3>
+          <p class="experience-company">Digital infrastruktur og cybersikkerhet.</p>
+        </div>
+        <p class="experience-period">2025 - d.d.</p>
+      </header>
+
+      <p class="experience-summary">
+        Fokus på nettverkssikkerhet, systemarkitektur, tilgangskontroll, samt praktisk bruk av cybersikkerhetsverktøy. 
+        Inngående forståelse av digitale trusselbilder og tekniske forsvarsmekanismer.
+      </p>
+
+    </article>
+
+    <article class="experience-card">
+      <header class="experience-header">
+        <div>
+          <h3>Norges teknisk-naturvitenskapelige universitet (NTNU), Gjøvik</h3>
+          <p class="experience-company">Økonomi og administrasjon.</p>
+        </div>
+        <p class="experience-period">2022 - 2025</p>
+      </header>
+
+      <p class="experience-summary">
+      Fordypning innen digital økonomi og cybersikkerhet. 
+      Med fokus på hvordan IKT påvirker drift, styring og risikohåndtering i moderne organisasjoner. 
+      Bacheloroppgave om bruk av AI i rekruttering (HR).
+      </p>
+    </article>  
+
+  </section>
+
+    <section class="cv-section">
+    <h2>Videregående</h2>
+
+    <article class="experience-card">
+      <header class="experience-header">
+        <div>
+          <h3>Karriere Oppland</h3>
+          <p class="experience-company">Påbygg til generell studiekompetanse</p>
+        </div>
+        <p class="experience-period">2021-2022</p>
+      </header>
+    </article>
+
+    <article class="experience-card">
+      <header class="experience-header">
+        <div>
+          <h3>Fagerlia Videregående skole</h3>
+          <p class="experience-company">Barn og ungdomsarbeider</p>
+        </div>
+        <p class="experience-period">2010-2011</p>
+      </header>
+    </article>
+
+    <article class="experience-card">
+      <header class="experience-header">
+        <div>
+          <h3>Borgund Videregående skole</h3>
+          <p class="experience-company">Helse og sosialfag</p>
+        </div>
+        <p class="experience-period">2009-2010</p>
+      </header>
+    </article>
+
+    <article class="experience-card">
+      <header class="experience-header">
+        <div>
+          <h3>Ålesund Videregående skole </h3>
+          <p class="experience-company">Medier og kommunikasjon</p>
+        </div>
+        <p class="experience-period">2008-2000</p>
+      </header>
+    </article>
+  </section>
+</main>
+
+
+    <!-- Theme -->
+  <script>
+    const btn = document.getElementById('theme-toggle');
+
+    function oppdaterLabel() {
+        const dark = document.documentElement.classList.contains('dark');
+        btn.setAttribute(
+        'aria-label',
+        dark ? 'Light' : 'Dark'
+        );
+    }
+
+    btn.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        oppdaterLabel();
+    });
+
+
+    oppdaterLabel();
+    </script>
+
+
+</body>
+</html>

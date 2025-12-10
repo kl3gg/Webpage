@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="no" class="no">
+<head>
+    <meta charset = 'UFF-8'>
+    <!-- Put in title on page -->
+    <title> CV </title> 
+    <meta name ='viewport' content = 'width=device-width, initial-scale=1.0'>
+
+    <!-- To prevent the page from appearing on search engines -->
+    <meta name="robots" content="noindex">  
+    <title>Don't index this page</title>
+    
+    <!-- css file adress her href [css file name] -->
+    <link rel="stylesheet" href="Verv.css">
+</head>
+
+<body>
+    <header>
+        <button id="theme-toggle" type="button" class="nav-btn" aria-label="Lyst" > 💡 </button>
+
+        <nav class="nav">
+            <!--husk å endre første når du skal ha det i en side -->
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="Arbeid.html" class="nav-btn">Arbeidserfaring</a>
+            <a href="Utdanning.html" class="nav-btn">Utdanning</a>
+            <a href="About.html" class="nav-btn">About</a>
+            <a href="Hobbies.html" class="nav-btn">Hobbies</a>
+            <a href="Contact.html" class="nav-btn">Contact</a> 
+            <a href="CV.pdf" class="primary-btn">Download CV</a>
+            </nav>
+    </header>
+
+<main>
+  <h1>Kurs</h1>
+
+<section class="cv-section">
+    <article class="experience-card">
+      <header class="experience-header">
+        <div>
+          <h3>HMS-kurs</h3>
+          <p class="experience-company">NTNU</p>
+        </div>
+        <p class="experience-period">2025</p>
+      </header>
+      <p class="experience-summary">
+        Brannslukningskurs i lukkede og opne rom. Gerunnleggende førstehjelp. 
+      </p>
+    </article>
+
+    <article class="experience-card">
+      <header class="experience-header">
+        <div>
+          <h3>LAOS-kurs</h3>
+          <p class="experience-company">NTNU</p>
+        </div>
+        <p class="experience-period">2024</p>
+      </header>
+      <p class="experience-summary">
+        Innføring i pedagogiske metoder knyttet til læringsaktiviteter, veiledning og gruppeledelse.
+      </p>
+    </article>  
+
+  
+  <section class="cv-section">
+    <h1>Ulønnet verv</h1>
+
+    <article class="experience-card">
+      <header class="experience-header">
+        <div>
+          <h3>Digital infrastruktur og cybersikkerhet (NTNU)</h3>
+          <p class="experience-company">Kulltilitsvalt</p>
+        </div>
+        <p class="experience-period">2025 - d.d.</p>
+      </header>
+    </article>
+
+    <article class="experience-card">
+      <header class="experience-header">
+        <div>
+          <h3>Liberalistene Innlandet</h3>
+          <p class="experience-company">Fylkesleder</p>
+        </div>
+        <p class="experience-period">02.2023-02.2026</p>
+      </header>
+    </article>  
+
+    <article class="experience-card">
+      <header class="experience-header">
+        <div>
+          <h3>Liberalistene Innlandet</h3>
+          <p class="experience-company">Fylkessekretær</p>
+        </div>
+        <p class="experience-period">02.2020-02.2023</p>
+      </header>
+    </article>
+
+        <article class="experience-card">
+      <header class="experience-header">
+        <div>
+          <h3>Liberalistisk Ungdom Innlandet</h3>
+          <p class="experience-company">Fylkesleder</p>
+        </div>
+        <p class="experience-period">02.2021- 02.2022  </p>
+      </header>
+    </article>
+
+  </section>
+</main>
+
+    <!-- Theme -->
+    <script>
+      const STORAGE_KEY = 'tema'; 
+      const btn = document.getElementById('theme-toggle');
+
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
+
+        document.documentElement.classList.toggle('dark', isDark);
+
+        btn.setAttribute('aria-label', isDark ? 'Light' : 'Dark');
+      }
+      (function initTheme() {
+        const stored = localStorage.getItem(STORAGE_KEY);
+
+        if (stored === 'dark' || stored === 'light') {
+          // Bruk lagret tema
+          applyTheme(stored);
+        } else {
+          // Defult Dark theme
+          applyTheme('dark');
+        }
+      })();
+      btn.addEventListener('click', () => {
+        const isCurrentlyDark = document.documentElement.classList.contains('dark');
+        const newTheme = isCurrentlyDark ? 'light' : 'dark';
+
+        applyTheme(newTheme);
+        localStorage.setItem(STORAGE_KEY, newTheme);
+      });
+    </script>
+
+
+</body>
+</html>
