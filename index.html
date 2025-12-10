@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no" class="dark">
+<html lang="no" class="no">
 <head>
     <meta charset = 'UFF-8'>
     <!-- Put in title on page -->
@@ -37,31 +37,42 @@
     <p>© Kristina Jonsen, 2025</p>
   </footer>
 
-    
     <!-- Theme -->
     <script>
-    const btn = document.getElementById('theme-toggle');
+      const STORAGE_KEY = 'tema'; 
+      const btn = document.getElementById('theme-toggle');
 
-    function oppdaterLabel() {
-        const dark = document.documentElement.classList.contains('dark');
-        btn.setAttribute(
-        'aria-label',
-        dark ? 'Light' : 'Dark'
-        );
-    }
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
 
-    btn.addEventListener('click', () => {
-        document.documentElement.classList.toggle('dark');
-        oppdaterLabel();
-    });
+        document.documentElement.classList.toggle('dark', isDark);
 
+        btn.setAttribute('aria-label', isDark ? 'Light' : 'Dark');
+      }
+      (function initTheme() {
+        const stored = localStorage.getItem(STORAGE_KEY);
 
-    oppdaterLabel();
+        if (stored === 'dark' || stored === 'light') {
+          // Bruk lagret tema
+          applyTheme(stored);
+        } else {
+          // Defult Dark theme
+          applyTheme('dark');
+        }
+      })();
+      btn.addEventListener('click', () => {
+        const isCurrentlyDark = document.documentElement.classList.contains('dark');
+        const newTheme = isCurrentlyDark ? 'light' : 'dark';
+
+        applyTheme(newTheme);
+        localStorage.setItem(STORAGE_KEY, newTheme);
+      });
     </script>
 
 
 </body>
 </html>
+
 
 
 
