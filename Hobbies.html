@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="no" class="no">
+<head>
+    <meta charset = 'UFF-8'>
+    <!-- Put in title on page -->
+    <title>Hobbyer</title> 
+    <meta name ='viewport' content = 'width=device-width, initial-scale=1.0'>
+
+    <!-- To prevent the page from appearing on search engines -->
+    <meta name="robots" content="noindex">  
+    <title>Don't index this page</title>
+    
+    <!-- css file adress her href [css file name] -->
+    <link rel="stylesheet" href="Hobbies.css"> <!--Husk å endre til css/-->
+</head>
+
+<body>
+    <header>
+        <button id="theme-toggle" type="button" class="nav-btn" aria-label="Lyst" > 💡 </button>
+
+        <nav class="nav">
+            <!--navigation -->
+            <a href="/" class="nav-btn">Home</a>
+            <a href="Arbeid.html" class="nav-btn">Curriculum Vitae</a>
+            <a href="About.html" class="nav-btn">About</a>
+            <a href="Contact.html" class="nav-btn">Contact</a> 
+            <a href="CV.pdf" class="primary-btn">Download CV</a>
+            </nav>
+    </header>
+
+    <main>
+
+        <h1>Mine hobbyer</h1>
+        <section>
+            <h2>Mine hobbyer</h2>
+            <p>
+              Jeg liker å holde meg aktiv og bruker mye av fritiden på styrketrening og fjellturer/gåturer på sommeren. 
+              Samtidig trives jeg godt hjemme, enten med en god bok, et brettspill eller en runde sjakk med venner.
+              </p>
+
+            <p>
+                Jeg har interesse for programmering og liker å utforske nye ting og lage små prosjekter - inkludert denne nettsiden.
+                Hovedsaklig liker å kode i Python. Men jeg kan og C og driver å lærer meg
+                På <a href="https://github.com/kl3gg" target="_blank" rel="noopener">GitHub</a>-kontoen min finner en noen av prosjektene mine.
+            </p>
+
+            <p>
+                Jeg driver også med hobbyfotografering, og liker spesielt å fotografere natur, detaljer og hverdagsøyeblikk.
+                Jeg begynte med foto som 14-åring da jeg kjøpte mitt første speilreflekskamera, 
+                og i dag bruker jeg et speilløst systemkamera. 
+                Fotografering gir meg muligheten til å være kreativ og er en fin unnskyldning til å komme meg ut og utforske nye steder.
+            </p>
+        </section>
+<section class="gallery-section">
+  <h2>Fotogalleri</h2>
+    <p>  
+      Her har jeg samlet noen av favorittbildene mine. Hvis du vil se flere, ligger det mer på         
+      <a href="https://instagram.com/KristinaJonsen" target="_blank" rel="noopener">Instagram</a>-kontoen min.
+    </p>
+  <div class="pswp-gallery" id="gallery-favoritter">
+    <!-- Image 1 --> 
+    <!-- Husk å endre path til Img/... --> 
+    <a 
+      href="Trollstien.jpg" 
+      data-pswp-width="1600"
+      data-pswp-height="1067"
+      target="_blank"
+    >
+      <img src="Trollstien.jpg" alt="Trollstien i skodde">
+    </a>
+
+    <!-- Image 2 -->
+    <!-- Husk å endre path til Img/... --> 
+    <a
+      href="Cat.jpg"
+      data-pswp-width="1600"
+      data-pswp-height="1067"
+      target="_blank"
+    >
+      <img src="Cat.jpg" alt="Cat hiding">
+    </a>
+
+    <!-- Image 3 -->
+    <a
+      href="Skjonghelleren.jpg"
+      data-pswp-width="1600"
+      data-pswp-height="1067"
+      target="_blank"
+    >
+      <img src="Skjonghelleren.jpg" alt="Utsikt fra Skjonghelleren mot Giske">
+    </a>
+
+    <!-- Image 4 -->
+    <a
+      href="Vajdahunyad_castle.jpg"
+      data-pswp-width="1600"
+      data-pswp-height="1067"
+      target="_blank"
+    >
+      <img src="Vajdahunyad_castle.jpg" alt="Solnedgang over Giske, tatt fra Signalen (Valderøy) ">
+    </a>
+    <!-- Image 5 -->
+    <a
+      href="Fairy_Shrooms.jpg"
+      data-pswp-width="1600"
+      data-pswp-height="1067"
+      target="_blank"
+    >
+      <img src="Fairy_Shrooms.jpg" alt="Eventyrisk fluesopp tatt ved Skumsjøen">
+    </a>
+
+    <!-- Image 6 -->
+    <a
+      href="Geit.jpg"
+      data-pswp-width="1600"
+      data-pswp-height="1067"
+      target="_blank"
+    >
+      <img src="Geit.jpg" alt="Tilfeildig gjeit">
+    </a>
+
+    <!-- Image 4 -->
+    <a
+      href="Giske.jpg"
+      data-pswp-width="1600"
+      data-pswp-height="1067"
+      target="_blank"
+    >
+      <img src="Giske.jpg" alt="Solnedgang over Giske, tatt fra Signalen (Valderøy) ">
+    </a>
+    <!-- Image 8 -->
+    <a
+      href="Pond_slider.jpg"
+      data-pswp-width="1600"
+      data-pswp-height="1067"
+      target="_blank"
+    >
+      <img src="Pond_slider.jpg" alt="Skilpadde som soler seg i dammen">
+    </a>
+
+    <!-- Image 9 -->
+    <a
+      href="Mumbles_pier.jpg"
+      data-pswp-width="1600"
+      data-pswp-height="1067"
+      target="_blank"
+    >
+      <img src="Mumbles_pier.jpg" alt="Mumbles pier in Swansea(Wales)">
+    </a>
+  </div>
+</section>
+
+    </main>
+
+  <footer>
+    <!-- Name her for copyright -->
+    <p>© Kristina Jonsen, 2025</p>
+  </footer>
+
+  
+    <!-- Theme -->
+    <script>
+      const STORAGE_KEY = 'tema'; 
+      const btn = document.getElementById('theme-toggle');
+
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
+
+        document.documentElement.classList.toggle('dark', isDark);
+
+        btn.setAttribute('aria-label', isDark ? 'Light' : 'Dark');
+      }
+      (function initTheme() {
+        const stored = localStorage.getItem(STORAGE_KEY);
+
+        if (stored === 'dark' || stored === 'light') {
+          // Bruk lagret tema
+          applyTheme(stored);
+        } else {
+          // Defult Dark theme
+          applyTheme('dark');
+        }
+      })();
+      btn.addEventListener('click', () => {
+        const isCurrentlyDark = document.documentElement.classList.contains('dark');
+        const newTheme = isCurrentlyDark ? 'light' : 'dark';
+
+        applyTheme(newTheme);
+        localStorage.setItem(STORAGE_KEY, newTheme);
+      });
+    </script>
+
+</body>
+</html>
