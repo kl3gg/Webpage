@@ -1,0 +1,227 @@
+:root {
+  --bg: #f5f5f5;
+  --text: #111827;
+
+  --header-bg: #111827;
+  --header-border: #dddddd;
+
+  --nav-btn-bg: #1f2937;
+  --nav-btn-text: #e5e7eb;
+  --nav-btn-border: #374151;
+
+  --nav-btn-hover-bg: #2563eb;
+  --nav-btn-hover-border: #2563eb;
+
+  --focus-outline: #93c5fd;
+}
+
+:root.dark {
+  --bg: #020617;
+  --text: #e5e7eb;
+
+  --header-bg: #020617;
+  --header-border: #1f2937;
+
+  --nav-btn-bg: #111827;
+  --nav-btn-text: #e5e7eb;
+  --nav-btn-border: #374151;
+
+  --nav-btn-hover-bg: #2563eb;
+  --nav-btn-hover-border: #2563eb;
+
+  --focus-outline: #93c5fd;
+}
+
+/* generell stil */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* KUN topp-headeren på siden */
+body > header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--header-border);
+  background: var(--header-bg);
+}
+
+/* Layout nav */
+.nav {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* knapper i menyen */
+.nav-btn,
+.primary-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--nav-btn-border);
+  background: var(--nav-btn-bg);
+  color: var(--nav-btn-text);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.nav-btn:hover,
+.primary-btn:hover {
+  background: var(--nav-btn-hover-bg);
+  border-color: var(--nav-btn-hover-border);
+  transform: translateY(-1px);
+}
+
+.nav-btn:focus-visible,
+.primary-btn:focus-visible {
+  outline: 2px solid var(--focus-outline);
+  outline-offset: 2px;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.cv-section {
+  margin-top: 2rem;
+}
+
+.cv-section > h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* Kort for hver jobb */
+.experience-card {
+  background: #ffffff; /* lys i light mode */
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.08);
+}
+
+/* Dark mode for kortet */
+:root.dark .experience-card {
+  background: rgba(15, 23, 42, 0.8);
+  border-color: rgba(148, 163, 184, 0.5);
+}
+
+/* Header inni kortet – gjør den nøytral */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+
+  /* overstyr global header-stil */
+  padding: 0;
+  border-bottom: none;
+  background: transparent;
+}
+
+.experience-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.experience-company {
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.experience-period {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Kort beskrivelse */
+.experience-summary {
+  margin: 0.75rem 0;
+}
+
+/* Punktliste */
+.experience-points {
+  margin: 0.5rem 0 0.75rem;
+  padding-left: 1.2rem;
+}
+
+.experience-points li {
+  margin-bottom: 0.25rem;
+}
+
+/* tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(148, 163, 184, 0.12);
+}
+
+/* Litt strammere i dark mode */
+:root.dark .tag {
+  border-color: rgba(148, 163, 184, 0.9);
+  background: rgba(15, 23, 42, 0.9);
+}
+
+
+.gallery-section {
+  margin: 2rem 0;
+}
+
+.gallery-section h2 {
+  margin-bottom: 1rem;
+}
+
+/* HER: oppdatert .pswp-gallery */
+.pswp-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* alltid 3 i bredden */
+  gap: 1rem;
+}
+
+/* Valgfritt: færre kolonner på små skjermer */
+@media (max-width: 700px) {
+  .pswp-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .pswp-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pswp-gallery a {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3; 
+}
+
+.pswp-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
