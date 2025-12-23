@@ -82,7 +82,7 @@ header {
   outline-offset: 2px;
 }
 
-/* ===== LYSPÆRE-KNAPP ===== */
+/* lightbulb */
 #theme-toggle {
   width: 56px;
   height: 56px;
@@ -188,5 +188,6 @@ main p {
   object-fit: cover;
   display: block;
 }
+
 
 
