@@ -32,7 +32,7 @@
   --focus-outline: #93c5fd;
 }
 
-/* generell style */
+/* base */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   margin: 0;
@@ -42,21 +42,20 @@ body {
   color: var(--text);
 }
 
-/* Top header on page */
-body > header {
+header {
   padding: 1rem;
   border-bottom: 1px solid var(--header-border);
   background: var(--header-bg);
 }
 
-/* Layout nav */
+/* nav layout */
 .nav {
   display: flex;
   gap: 12px;
   justify-content: center;
 }
 
-/* Buttons in menu */
+/* buttons */
 .nav-btn,
 .primary-btn {
   display: inline-block;
@@ -81,6 +80,46 @@ body > header {
 .primary-btn:focus-visible {
   outline: 2px solid var(--focus-outline);
   outline-offset: 2px;
+}
+
+/* ===== LYSPÆRE-KNAPP ===== */
+#theme-toggle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid #374151;
+
+  background: radial-gradient(circle at top, #1f2937, #020617);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.05),
+    0 0 25px rgba(59,130,246,0.25);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+#theme-toggle:hover {
+  transform: translateY(-1px) scale(1.05);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.08),
+    0 0 35px rgba(59,130,246,0.45);
+}
+
+#theme-toggle:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px #93c5fd,
+    0 0 30px rgba(59,130,246,0.6);
 }
 
 main {
@@ -181,3 +220,4 @@ main {
   border-color: rgba(148, 163, 184, 0.9);
   background: rgba(15, 23, 42, 0.9);
 }
+
