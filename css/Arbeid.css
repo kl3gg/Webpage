@@ -82,7 +82,7 @@ header {
   outline-offset: 2px;
 }
 
-/* ===== LYSPÆRE-KNAPP ===== */
+/* lightbulb */
 #theme-toggle {
   width: 56px;
   height: 56px;
@@ -220,5 +220,6 @@ main {
   border-color: rgba(148, 163, 184, 0.9);
   background: rgba(15, 23, 42, 0.9);
 }
+
 
 
