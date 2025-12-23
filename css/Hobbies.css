@@ -13,10 +13,6 @@
   --nav-btn-hover-border: #2563eb;
 
   --focus-outline: #93c5fd;
-
-  /* Links in light mode */
-  --link-color: #2563eb;
-  --link-hover: #1d4ed8;
 }
 
 :root.dark {
@@ -34,13 +30,9 @@
   --nav-btn-hover-border: #2563eb;
 
   --focus-outline: #93c5fd;
-
-  /* Llinks in dark mode */
-  --link-color: #93c5fd;
-  --link-hover: #bfdbfe;
 }
 
-/* genneral style */
+/* base */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   margin: 0;
@@ -50,32 +42,20 @@ body {
   color: var(--text);
 }
 
-/* Links */
-a {
-  color: var(--link-color);
-  text-decoration: underline;
-  transition: color 0.2s ease;
-}
-
-a:hover {
-  color: var(--link-hover);
-}
-
-/* Top header on page */
-body > header {
+header {
   padding: 1rem;
   border-bottom: 1px solid var(--header-border);
   background: var(--header-bg);
 }
 
-/* Layout nav */
+/* nav layout */
 .nav {
   display: flex;
   gap: 12px;
   justify-content: center;
 }
 
-/* Buttons in menu*/
+/* buttons */
 .nav-btn,
 .primary-btn {
   display: inline-block;
@@ -86,22 +66,60 @@ body > header {
   color: var(--nav-btn-text);
   font-size: 0.95rem;
   text-decoration: none;
-  transition:
-    background 0.15s ease,
-    border-color 0.15s ease,
-    transform 0.1s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
 }
 
-
-#theme-toggle {
-  padding-inline: 10px;
-  font-size: 1.2rem; 
+.nav-btn:hover,
+.primary-btn:hover {
+  background: var(--nav-btn-hover-bg);
+  border-color: var(--nav-btn-hover-border);
+  transform: translateY(-1px);
 }
 
 .nav-btn:focus-visible,
 .primary-btn:focus-visible {
   outline: 2px solid var(--focus-outline);
   outline-offset: 2px;
+}
+
+/* ===== LYSPÆRE-KNAPP ===== */
+#theme-toggle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid #374151;
+
+  background: radial-gradient(circle at top, #1f2937, #020617);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.05),
+    0 0 25px rgba(59,130,246,0.25);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+#theme-toggle:hover {
+  transform: translateY(-1px) scale(1.05);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.08),
+    0 0 35px rgba(59,130,246,0.45);
+}
+
+#theme-toggle:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px #93c5fd,
+    0 0 30px rgba(59,130,246,0.6);
 }
 
 main {
@@ -170,4 +188,5 @@ main p {
   object-fit: cover;
   display: block;
 }
+
 
