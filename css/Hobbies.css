@@ -92,11 +92,10 @@ body > header {
     transform 0.1s ease;
 }
 
-.nav-btn:hover,
-.primary-btn:hover {
-  background: var(--nav-btn-hover-bg);
-  border-color: var(--nav-btn-hover-border);
-  transform: translateY(-1px);
+
+#theme-toggle {
+  padding-inline: 10px;
+  font-size: 1.2rem; 
 }
 
 .nav-btn:focus-visible,
@@ -171,3 +170,4 @@ main p {
   object-fit: cover;
   display: block;
 }
+
