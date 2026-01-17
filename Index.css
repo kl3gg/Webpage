@@ -135,7 +135,7 @@ main {
 }
 
 .about-image { 
- width: 340px;
+ width: 420px;
  max-width: 100%;
  height: auto;
  object-fit: contain;
@@ -227,3 +227,4 @@ main {
   border-color: rgba(148, 163, 184, 0.9);
   background: rgba(15, 23, 42, 0.9);
 }
+
